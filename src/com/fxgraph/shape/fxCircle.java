@@ -12,14 +12,9 @@ public class fxCircle extends Cell {
         view.getStyleClass().add("circle");
         setView(view);
 
-//        setOnMouseClicked(t -> {
-//            if (t.getClickCount() == 2) {
-//                super.getTextField().setVisible(!super.getTextField().visibleProperty().getValue());
-//            }
-//        });
 
-            xProperty().bind(layoutXProperty().add(getBoundsInLocal().getMaxX()).divide(2));
-            yProperty().bind(layoutYProperty().add(getBoundsInLocal().getMaxY()).divide(2));
+            xProperty().bind(layoutXProperty().add(getBoundsInLocal().getMaxX()));
+            yProperty().bind(layoutYProperty().add(getBoundsInLocal().getMaxY()));
 
 
 

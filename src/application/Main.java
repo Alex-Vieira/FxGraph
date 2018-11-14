@@ -39,15 +39,18 @@ public class Main extends Application {
         model.addCell(circleA);
         model.addCell(circleB);
         model.addCell(circleC);
+        model.addCell(circleD);
+
         model.addEdge(circleA.getCellId(), circleB.getCellId(), EdgeType.LINE);
-        model.addEdge(circleB.getCellId(), circleC.getCellId(), EdgeType.ARC);
-        model.addEdge(circleC.getCellId(), circleA.getCellId(), EdgeType.LINE);
+        //model.addEdge(circleB.getCellId(), circleC.getCellId(), EdgeType.LOOP);
+        model.addEdge(circleC.getCellId(), circleD.getCellId(), EdgeType.ARC);
 
 
         root.getChildren().addAll(circleA, circleB);
         graph.endUpdate();
         Layout layout = new PositionLayout(graph);
         layout.execute();
+
 
     }
 
